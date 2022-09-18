@@ -32,7 +32,7 @@ public class TestLogin {
 		DriverSingleton.getInstance(Constants.CHROME);
 		driver = DriverSingleton.getDriver();
 		driver.get(Constants.URL);
-		loginPage = new LoginPage(); //inisialisasi nanti di getDriver di LoginPage
+		loginPage = new LoginPage();
 	}
 	
 	@AfterMethod
