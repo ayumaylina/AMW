@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tugas.selenium.demoqa.Form">
+      <class name="ujian.ujiankelima.selenium.ShareTest">
         <methods>
           <include name="closeBrowser"/>
-          <include name="testValidForm"/>
           <include name="pageObject"/>
+          <include name="testShareProduct"/>
         </methods>
-      </class> <!-- tugas.selenium.demoqa.Form -->
+      </class> <!-- ujian.ujiankelima.selenium.ShareTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

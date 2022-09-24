@@ -38,7 +38,7 @@ public class TestCalculator {
 		int x =rand.nextInt(1,101);
 		int y =rand.nextInt(1,103);
 		
-		AssertJUnit.assertEquals(c.addNilaiManda(x, y),c.addNilaiX(x, y));
+		AssertJUnit.assertEquals(c.addNilai(x, y),c.addNilaiX(x, y));
 		System.out.println("===============================TEST ADD NILAI SELESAI =========================================");
 //		AssertJUnit.assertEquals(c.addNilaiManda(x, y),22);
 	}
