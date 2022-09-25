@@ -11,16 +11,16 @@ import selenium.pagefactoryobject.drivers.DriverSingleton;
 import selenium.pagefactoryobject.page.ShopHomePage;
 import selenium.pagefactoryobject.util.Constants;
 
-public class ShareTest {
+public class DetailProductTest {
 	public static WebDriver driver;
-	private ShopHomePage sharePage;
+	private ShopHomePage detailPage;
 	
 	@BeforeMethod
 	public void pageObject() {
 		DriverSingleton.getInstance(Constants.CHROME);
 		driver = DriverSingleton.getDriver();
 		driver.get(Constants.URL_SHOP);
-		sharePage = new ShopHomePage(); 
+		detailPage = new ShopHomePage(); 
 	}
 	
 	@AfterMethod
@@ -29,9 +29,9 @@ public class ShareTest {
 		DriverSingleton.closeObjectInstance();
 	}
 	
-//	@Test
-//	public void testShareProduct() {
-//		sharePage.shareProduct();
-//		assertEquals(sharePage.getTxtFacebook(), "Forgotten account?"); //Log in to your Facebook account to share. Facebook
-//	}
+	@Test
+	public void testDetailProduct() {
+		detailPage.shareProduct();
+		assertEquals(detailPage.getTxtDetail(), "TOKYO TALKIES"); 
+	}
 }

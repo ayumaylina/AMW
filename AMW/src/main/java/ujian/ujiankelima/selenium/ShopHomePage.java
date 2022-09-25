@@ -1,4 +1,4 @@
-package selenium.pagefactoryobject.page;
+package ujian.ujiankelima.selenium;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -49,10 +49,6 @@ private WebDriver driver;
 	@FindBy(xpath = "//h1[@class='product_title entry-title']")
 	private WebElement msgSearch;
 	
-	//DETAIL
-	@FindBy(xpath = "//h1[@class='page-title']")
-	private WebElement msgDetail;
-	
 	//ADD TO CART
 	@FindBy(xpath = "//a[normalize-space()='Tokyo Talkies']")
 	private WebElement product;
@@ -86,21 +82,16 @@ private WebDriver driver;
 			rbt.keyPress(KeyEvent.VK_SUBTRACT);
 			rbt.keyPress(KeyEvent.VK_CONTROL);
 			}
-//			btnShare.click();
+			btnShare.click();
 		} catch (AWTException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		
 	}
 	
 	public String getTxtFacebook() {
 		return msgFacebook.getText();
-	}
-	
-	public String getTxtDetail() {
-		return msgDetail.getText();
 	}
 	
 	//SEARCHPRODUCT
@@ -142,7 +133,6 @@ private WebDriver driver;
 				.until(ExpectedConditions.visibilityOf(msgCart)).getText();
 	}
 	
-	//
 	
 //	public void zoomIn() throws AWTException {
 //		Robot robot = new Robot();
